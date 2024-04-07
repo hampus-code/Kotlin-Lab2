@@ -32,7 +32,7 @@ fun MainScreen(navController: NavHostController) {
         modifier = Modifier.fillMaxSize()
     ) {
         Image(
-            painter = painterResource(id = R.drawable.ic_launcher_background),
+            painter = painterResource(id = R.drawable.desert_image),
             contentDescription = "",
             contentScale = ContentScale.FillBounds,
             modifier = Modifier.matchParentSize()
@@ -57,7 +57,7 @@ fun MainScreen(navController: NavHostController) {
                     contentDescription = "App Logo",
                     modifier = Modifier
                         .size(200.dp)
-                        .offset(x = -10.dp)
+                        .offset(x = (-10).dp)
                 )
                 Spacer(modifier = Modifier.width(16.dp)) // Adjust the spacing as needed
             }
