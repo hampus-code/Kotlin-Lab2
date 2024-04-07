@@ -53,7 +53,7 @@ fun AboutScreen(navController: NavHostController) {
             contentAlignment = Alignment.Center
         ) {
             Image(
-                painter = painterResource(id = R.drawable.ic_launcher_background),
+                painter = painterResource(id = R.drawable.desert_covering_earth),
                 contentDescription = "",
                 contentScale = ContentScale.FillBounds
 
