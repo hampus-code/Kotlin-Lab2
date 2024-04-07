@@ -53,7 +53,7 @@ fun MainScreen(navController: NavHostController) {
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.ic_launcher_background),
+                    painter = painterResource(id = R.drawable.app_logo),
                     contentDescription = "App Logo",
                     modifier = Modifier
                         .size(200.dp)
