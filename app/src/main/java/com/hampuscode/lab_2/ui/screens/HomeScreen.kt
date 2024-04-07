@@ -23,6 +23,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import com.hampuscode.lab_2.GreetingUser
 import com.hampuscode.lab_2.R
 
 @Composable
@@ -45,7 +46,7 @@ fun MainScreen(navController: NavHostController) {
 
             Spacer(modifier = Modifier.padding(top = 50.dp))
 
-            //GreetingUser()
+            GreetingUser()
 
 
             Row(
