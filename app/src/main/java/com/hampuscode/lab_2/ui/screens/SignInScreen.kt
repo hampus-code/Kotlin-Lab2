@@ -27,16 +27,17 @@ import androidx.navigation.NavHostController
 import com.hampuscode.lab_2.R
 import com.hampuscode.lab_2.ui.models.User
 
-@Composable // Testa att göra med composables, t.ex username/password delen som en egen composable
+@Composable
 fun SignInScreen(navController: NavHostController, context: Context) {
-    val enteredUsername = remember { mutableStateOf(TextFieldValue()) } //rememberSaveable?
-    val enteredPassword = remember { mutableStateOf(TextFieldValue()) }
+    val enteredUsername = remember { mutableStateOf(TextFieldValue()) } //Remembering user input for username
+    val enteredPassword = remember { mutableStateOf(TextFieldValue()) } //Remembering user input for password
 
-    val userData = remember { User("Hampus", "123") }
+    val userData = remember { User("Hampus", "123") } //Remembering the user created from the User data class
 
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
+        //Background image
         Image(
             painter = painterResource(id = R.drawable.desert_with_sky),
             contentDescription = "",
@@ -60,6 +61,7 @@ fun SignInScreen(navController: NavHostController, context: Context) {
                     .padding(vertical = 8.dp)
                     .widthIn(max = 280.dp)
             ) {
+                //Inputfield for username
                 OutlinedTextField(
                     value = enteredUsername.value,
                     onValueChange = { enteredUsername.value = it },
@@ -72,6 +74,7 @@ fun SignInScreen(navController: NavHostController, context: Context) {
                     .padding(vertical = 8.dp)
                     .widthIn(max = 280.dp)
             ) {
+                //Inputfield for password
                 OutlinedTextField(
                     value = enteredPassword.value,
                     onValueChange = { enteredPassword.value = it },
@@ -81,11 +84,14 @@ fun SignInScreen(navController: NavHostController, context: Context) {
                 )
             }
 
+            //Button that navigates to LoggedInScreen
             Button(
                 onClick = {
+                    //Checking if user input on username and password is the same as in the User data class
                     if (enteredUsername.value.text == userData.userName && enteredPassword.value.text == userData.password) {
                         navController.navigate("logged_in_screen/${userData.userName}/${userData.password}")
                     } else {
+                        //If login is incorrect the Toast shows
                         Toast.makeText(
                             context,
                             "Incorrect username or password, please try again.",

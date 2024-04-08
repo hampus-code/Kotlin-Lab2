@@ -23,6 +23,7 @@ fun LoggedInScreen(navController: NavHostController, username: String) {
         modifier = Modifier.fillMaxSize()
     ) {
         Image(
+            //Background image
             painter = painterResource(id = R.drawable.desert_image),
             contentDescription = "",
             contentScale = ContentScale.FillBounds,
@@ -36,7 +37,7 @@ fun LoggedInScreen(navController: NavHostController, username: String) {
 
             Spacer(modifier = Modifier.padding(top = 50.dp))
 
-            Text(text = "Welcome $username to your page!")
+            Text(text = "Welcome $username to your page!") //Showing the users username in the text
             Text(text = "Here is one more fascinating fact:")
             Text(text = "In the Atacama desert it hasn't rained ")
             Text(text = "in 40 million years!")

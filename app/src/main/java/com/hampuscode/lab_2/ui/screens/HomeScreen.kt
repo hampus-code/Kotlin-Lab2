@@ -33,6 +33,7 @@ fun MainScreen(navController: NavHostController) {
         modifier = Modifier.fillMaxSize()
     ) {
         Image(
+            //Background image
             painter = painterResource(id = R.drawable.desert_image),
             contentDescription = "",
             contentScale = ContentScale.FillBounds,
@@ -46,7 +47,7 @@ fun MainScreen(navController: NavHostController) {
 
             Spacer(modifier = Modifier.padding(top = 50.dp))
 
-            GreetingUser()
+            GreetingUser() // Showing Greeting to user
 
 
             Row(
@@ -54,16 +55,17 @@ fun MainScreen(navController: NavHostController) {
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Image(
+                    //The apps logo
                     painter = painterResource(id = R.drawable.app_logo),
                     contentDescription = "App Logo",
                     modifier = Modifier
                         .size(200.dp)
                         .offset(x = (-10).dp)
                 )
-                Spacer(modifier = Modifier.width(16.dp)) // Adjust the spacing as needed
+                Spacer(modifier = Modifier.width(16.dp))
             }
 
-            Spacer(modifier = Modifier.padding(top = 150.dp))
+            Spacer(modifier = Modifier.padding(top = 150.dp))// Adding padding from the top
 
             Button(onClick = {
                 navController.navigate("about_screen")
@@ -76,6 +78,7 @@ fun MainScreen(navController: NavHostController) {
 
             Spacer(modifier = Modifier.padding(top = 50.dp))
 
+            //Button that navigates to SignInScreen
             Button(onClick = {
                 navController.navigate("sign_in_screen")
             }) {

@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.hampuscode.lab_2.R
 
-val backgroundColor = Color(0xFFF6DCC4)
+val backgroundColor = Color(0xFFF6DCC4) // Creating background color
 
 @Composable
 fun AboutScreen(navController: NavHostController) {
@@ -62,6 +62,7 @@ fun AboutScreen(navController: NavHostController) {
 
         Spacer(modifier = Modifier.padding(top = 150.dp))
 
+        //Button that navigates to SignInScreen
         Button(onClick = {
             navController.navigate("sign_in_screen")
         }) {
@@ -72,6 +73,7 @@ fun AboutScreen(navController: NavHostController) {
 
         Spacer(modifier = Modifier.padding(top = 50.dp))
 
+        //Button that navigates back to HomeScreen
         Button(onClick = {
             navController.navigate("main_screen")
         }) {

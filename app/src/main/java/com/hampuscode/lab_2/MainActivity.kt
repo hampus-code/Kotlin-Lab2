@@ -44,12 +44,13 @@ fun GreetingUser() {
     Text(text = "Welcome visitor to DuneDash!", color = Color.Black)
 }
 
+//Navigation
 @Composable
 fun ComposeNavigation(context: Context) {
     val navController = rememberNavController()
     NavHost(
         navController = navController,
-        startDestination = "main_screen"
+        startDestination = "main_screen" //This is HomeScreen
     ) {
         composable("main_screen") {
             MainScreen(navController = navController)
